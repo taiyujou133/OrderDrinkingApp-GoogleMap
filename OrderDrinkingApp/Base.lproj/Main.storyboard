@@ -18,166 +18,191 @@
         <scene sceneID="XEU-v6-7Vl">
             <objects>
                 <tableViewController id="ZK8-cZ-MOT" customClass="OrderListTableViewController" customModule="OrderDrinkingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="F2W-GM-y9X">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="F2W-GM-y9X">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="Wsx-WG-8B0">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderListTableViewCell" rowHeight="242" id="hbf-D8-Q2D" customClass="OrderListTableViewCell" customModule="OrderDrinkingApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="242"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hbf-D8-Q2D" id="poL-bf-HDJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="242"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aEx-XG-n6I">
-                                                    <rect key="frame" x="36" y="44" width="50" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購明細:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vGn-7Y-DZQ">
-                                                    <rect key="frame" x="36" y="11" width="95" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李大頭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="reg-Fu-XsA">
-                                                    <rect key="frame" x="94" y="44" width="85" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0912-123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fU8-4v-hk5">
-                                                    <rect key="frame" x="245" y="45" width="125" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0hk-vC-Fze">
-                                                    <rect key="frame" x="187" y="44" width="50" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名稱:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fsd-wW-P37">
-                                                    <rect key="frame" x="36" y="76" width="95" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="觀音珍珠奶茶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29f-b8-jxG">
-                                                    <rect key="frame" x="132" y="76" width="245" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.53061944250000004" green="0.70606309180000004" blue="0.91403007510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購時間:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8BP-4h-7Nm">
-                                                    <rect key="frame" x="36" y="141" width="95" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022/11/6 11:35:23AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ddg-Rf-WEJ">
-                                                    <rect key="frame" x="139" y="141" width="231" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冰塊:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRi-9h-TOA">
-                                                    <rect key="frame" x="139" y="109" width="50" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標準" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5WH-gt-qP2">
-                                                    <rect key="frame" x="194" y="111" width="50" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8分糖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yGG-bY-WUs">
-                                                    <rect key="frame" x="303" y="111" width="74" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數量:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bIG-HW-l14">
-                                                    <rect key="frame" x="36" y="108" width="50" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bTv-iy-NBY">
-                                                    <rect key="frame" x="85" y="109" width="46" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="備註:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dVk-ZO-WRz">
-                                                    <rect key="frame" x="36" y="173" width="50" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="甜度:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SCD-Jp-7hf">
-                                                    <rect key="frame" x="252" y="109" width="51" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-jr-UTK">
-                                                    <rect key="frame" x="94" y="173" width="276" height="58"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx5-rf-Auv">
-                                                    <rect key="frame" x="303" y="11" width="67" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="刪除"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiR-8w-54o">
-                                                    <rect key="frame" x="228" y="10" width="67" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="修改"/>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderListTableViewCell" rowHeight="300" id="hbf-D8-Q2D" customClass="OrderListTableViewCell" customModule="OrderDrinkingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hbf-D8-Q2D" id="poL-bf-HDJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aEx-XG-n6I">
+                                            <rect key="frame" x="36" y="44" width="50" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購明細:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vGn-7Y-DZQ">
+                                            <rect key="frame" x="36" y="11" width="95" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李大頭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="reg-Fu-XsA">
+                                            <rect key="frame" x="94" y="44" width="85" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0912-123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fU8-4v-hk5">
+                                            <rect key="frame" x="245" y="45" width="125" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0hk-vC-Fze">
+                                            <rect key="frame" x="187" y="44" width="50" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名稱:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fsd-wW-P37">
+                                            <rect key="frame" x="36" y="76" width="95" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="觀音珍珠奶茶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29f-b8-jxG">
+                                            <rect key="frame" x="132" y="76" width="245" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.53061944250000004" green="0.70606309180000004" blue="0.91403007510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購時間:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8BP-4h-7Nm">
+                                            <rect key="frame" x="36" y="141" width="95" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022/11/6 11:35:23AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ddg-Rf-WEJ">
+                                            <rect key="frame" x="139" y="141" width="231" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冰塊:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRi-9h-TOA">
+                                            <rect key="frame" x="139" y="109" width="50" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標準" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5WH-gt-qP2">
+                                            <rect key="frame" x="194" y="111" width="50" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8分糖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yGG-bY-WUs">
+                                            <rect key="frame" x="303" y="111" width="74" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數量:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bIG-HW-l14">
+                                            <rect key="frame" x="36" y="108" width="50" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bTv-iy-NBY">
+                                            <rect key="frame" x="85" y="109" width="46" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="備註:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dVk-ZO-WRz">
+                                            <rect key="frame" x="36" y="173" width="50" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="甜度:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SCD-Jp-7hf">
+                                            <rect key="frame" x="252" y="109" width="51" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-jr-UTK">
+                                            <rect key="frame" x="94" y="173" width="276" height="105"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx5-rf-Auv">
+                                            <rect key="frame" x="303" y="11" width="67" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="GCf-4r-7AP"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="刪除"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiR-8w-54o">
+                                            <rect key="frame" x="228" y="10" width="67" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="bRK-zv-KSq"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="修改"/>
+                                            <connections>
+                                                <segue destination="Aev-H0-JnY" kind="show" id="vYa-Vf-dxz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tx5-rf-Auv" firstAttribute="trailing" secondItem="UcH-jr-UTK" secondAttribute="trailing" id="1NV-JX-Hvn"/>
+                                        <constraint firstItem="tx5-rf-Auv" firstAttribute="leading" secondItem="DiR-8w-54o" secondAttribute="trailing" constant="8" symbolic="YES" id="7Bv-Xj-3vh"/>
+                                        <constraint firstItem="UcH-jr-UTK" firstAttribute="top" secondItem="dVk-ZO-WRz" secondAttribute="top" id="HrA-2q-3Io"/>
+                                        <constraint firstItem="UcH-jr-UTK" firstAttribute="leading" secondItem="reg-Fu-XsA" secondAttribute="leading" id="Jyp-qv-UEQ"/>
+                                        <constraint firstItem="DiR-8w-54o" firstAttribute="leading" secondItem="vGn-7Y-DZQ" secondAttribute="trailing" constant="97" id="LtI-c4-hQA"/>
+                                        <constraint firstItem="tx5-rf-Auv" firstAttribute="leading" secondItem="yGG-bY-WUs" secondAttribute="leading" id="RKe-m2-Vud"/>
+                                        <constraint firstItem="fU8-4v-hk5" firstAttribute="top" secondItem="DiR-8w-54o" secondAttribute="bottom" constant="9" id="T8q-Cy-yzm"/>
+                                        <constraint firstItem="fU8-4v-hk5" firstAttribute="top" secondItem="tx5-rf-Auv" secondAttribute="bottom" constant="8" symbolic="YES" id="VuJ-q3-PBc"/>
+                                        <constraint firstItem="UcH-jr-UTK" firstAttribute="bottom" secondItem="poL-bf-HDJ" secondAttribute="bottomMargin" constant="-11" id="YWm-Su-8LX"/>
+                                        <constraint firstAttribute="trailing" secondItem="tx5-rf-Auv" secondAttribute="trailing" constant="20" symbolic="YES" id="pPi-5u-Pfa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="orderInfoCommentTextView" destination="UcH-jr-UTK" id="hPH-Xy-UJ6"/>
+                                    <outlet property="orderInfoCupAmountLabel" destination="bTv-iy-NBY" id="q8W-P1-CN3"/>
+                                    <outlet property="orderInfoDrinkingNameLabel" destination="29f-b8-jxG" id="kDz-Zv-cue"/>
+                                    <outlet property="orderInfoIceDegreeLabel" destination="5WH-gt-qP2" id="Ywm-vV-Mg1"/>
+                                    <outlet property="orderInfoOrderTimeLabel" destination="ddg-Rf-WEJ" id="08G-uS-tSe"/>
+                                    <outlet property="orderInfoSugarDegreeLabel" destination="yGG-bY-WUs" id="2QF-Hl-Rtz"/>
+                                    <outlet property="orderInfoUserNameLabel" destination="reg-Fu-XsA" id="ABE-OX-5Rs"/>
+                                    <outlet property="orderInfoUserPhoneLabel" destination="fU8-4v-hk5" id="KQB-7I-JP7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="ZK8-cZ-MOT" id="NkK-md-0ui"/>
                             <outlet property="delegate" destination="ZK8-cZ-MOT" id="U2L-8s-oEn"/>
@@ -517,19 +542,19 @@
                                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V6N-OD-C0A">
                                                             <rect key="frame" x="97" y="94" width="213" height="32"/>
                                                             <segments>
-                                                                <segment title="10"/>
-                                                                <segment title="8"/>
-                                                                <segment title="5"/>
-                                                                <segment title="3"/>
-                                                                <segment title="0"/>
+                                                                <segment title="正常"/>
+                                                                <segment title="8分"/>
+                                                                <segment title="5分"/>
+                                                                <segment title="3分"/>
+                                                                <segment title="無糖"/>
                                                             </segments>
                                                         </segmentedControl>
                                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PP9-L1-Xee">
                                                             <rect key="frame" x="97" y="34" width="177" height="32"/>
                                                             <segments>
-                                                                <segment title="Standar"/>
-                                                                <segment title="Less"/>
-                                                                <segment title="No ICE"/>
+                                                                <segment title="正常"/>
+                                                                <segment title="8分冰"/>
+                                                                <segment title="去冰"/>
                                                             </segments>
                                                         </segmentedControl>
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-li-Gi2">
@@ -679,6 +704,249 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhg-jc-FsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3304.6153846153843" y="9.24170616113744"/>
+        </scene>
+        <!--Update Order Table View Controller-->
+        <scene sceneID="nrF-vC-xNq">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="Aev-H0-JnY" customClass="UpdateOrderTableViewController" customModule="OrderDrinkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" id="OMI-W2-xPt">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="792"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="rPh-xY-Yha">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderDrinkingTableViewCell" rowHeight="650" id="A5W-dq-fpL" customClass="OrderDrinkingTableViewCell" customModule="OrderDrinkingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="358" height="650"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A5W-dq-fpL" id="VcT-O3-tgb">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="650"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DrinkName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klg-or-NhX">
+                                                    <rect key="frame" x="92.666666666666686" y="24" width="153" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="fRc-HT-VaF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="34"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bb5-ds-WLs">
+                                                    <rect key="frame" x="269" y="25.000000000000007" width="69" height="94.666666666666686"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="69" id="mT2-uJ-Vac"/>
+                                                        <constraint firstAttribute="height" constant="96" id="v7c-rB-1uT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="價格:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNR-Rr-DeO">
+                                                    <rect key="frame" x="93" y="80" width="63" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="9AT-ca-Xpa"/>
+                                                        <constraint firstAttribute="height" constant="20" id="GKh-bj-vLL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="115" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-6A-mPO">
+                                                    <rect key="frame" x="147" y="74" width="99" height="26"/>
+                                                    <color key="backgroundColor" red="0.52883845569999999" green="0.7058154941" blue="0.91404545309999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="KWi-tK-V6F"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="duF-pS-Hg2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" restorationIdentifier="coldDrinking" translatesAutoresizingMaskIntoConstraints="NO" id="i9E-90-7I2">
+                                                    <rect key="frame" x="20" y="120" width="318" height="560"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="甜度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntg-g6-9kD">
+                                                            <rect key="frame" x="20" y="91.333333333333343" width="60" height="36.666666666666657"/>
+                                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杯數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lia-dX-Kqr">
+                                                            <rect key="frame" x="20" y="150.33333333333331" width="60" height="36.666666666666657"/>
+                                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冰塊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qr-Ca-6qP">
+                                                            <rect key="frame" x="20" y="31" width="60" height="37"/>
+                                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-Xx-elg">
+                                                            <rect key="frame" x="97" y="94" width="213" height="32"/>
+                                                            <segments>
+                                                                <segment title="正常"/>
+                                                                <segment title="8分"/>
+                                                                <segment title="5分"/>
+                                                                <segment title="3分"/>
+                                                                <segment title="無糖"/>
+                                                            </segments>
+                                                        </segmentedControl>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-3m-NVn">
+                                                            <rect key="frame" x="97" y="34" width="177" height="32"/>
+                                                            <segments>
+                                                                <segment title="正常"/>
+                                                                <segment title="8分冰"/>
+                                                                <segment title="去冰"/>
+                                                            </segments>
+                                                        </segmentedControl>
+                                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dWO-yT-L4J">
+                                                            <rect key="frame" x="163" y="152" width="94" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="DE5-AB-c9M"/>
+                                                                <constraint firstAttribute="width" constant="94" id="S2t-ya-kGz"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="orderDrinkingCupStepper:" destination="Aev-H0-JnY" eventType="valueChanged" id="Dmz-4X-NqY"/>
+                                                            </connections>
+                                                        </stepper>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="備註:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-z8-q11">
+                                                            <rect key="frame" x="20" y="152" width="99" height="136.33333333333337"/>
+                                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJW-5A-IMF">
+                                                            <rect key="frame" x="20" y="403" width="91" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手機號碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIW-gv-Ka9">
+                                                            <rect key="frame" x="127" y="403" width="172" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuh-KX-unM">
+                                                            <rect key="frame" x="0.0" y="462.66666666666663" width="318" height="43.666666666666686"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="tinted">
+                                                                <attributedString key="attributedTitle">
+                                                                    <fragment content="更新">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="24" name="WenQuanYiZenHeiMono"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="orderDrinkingOrderButtonAction:" destination="Aev-H0-JnY" eventType="touchUpInside" id="Er1-va-3JL"/>
+                                                            </connections>
+                                                        </button>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ia-Ww-RIt">
+                                                            <rect key="frame" x="20" y="248" width="279" height="147"/>
+                                                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="279" id="4iY-CY-gYl"/>
+                                                                <constraint firstAttribute="height" constant="147" id="KUC-NG-piR"/>
+                                                            </constraints>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="skD-0f-23R">
+                                                            <rect key="frame" x="97" y="150" width="55" height="34"/>
+                                                            <color key="textColor" systemColor="systemPinkColor"/>
+                                                            <fontDescription key="fontDescription" name="WenQuanYiZenHeiMono" family="WenQuanYi Zen Hei Mono" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="skD-0f-23R" firstAttribute="leading" secondItem="UzF-Xx-elg" secondAttribute="leading" id="0h6-qo-xfh"/>
+                                                        <constraint firstItem="UzF-Xx-elg" firstAttribute="leading" secondItem="Ntg-g6-9kD" secondAttribute="trailing" constant="17" id="0vc-zf-CVo"/>
+                                                        <constraint firstItem="Ntg-g6-9kD" firstAttribute="leading" secondItem="i9E-90-7I2" secondAttribute="leading" constant="20" id="2vf-hI-Kch"/>
+                                                        <constraint firstItem="1Qr-Ca-6qP" firstAttribute="top" secondItem="i9E-90-7I2" secondAttribute="top" constant="31" id="3vU-wu-nf8"/>
+                                                        <constraint firstItem="skD-0f-23R" firstAttribute="leading" secondItem="Mp9-z8-q11" secondAttribute="trailing" constant="-22" id="4ii-Qo-ja8"/>
+                                                        <constraint firstItem="UzF-Xx-elg" firstAttribute="top" secondItem="G9Z-3m-NVn" secondAttribute="bottom" constant="29" id="6t2-1f-vJH"/>
+                                                        <constraint firstItem="4Ia-Ww-RIt" firstAttribute="top" secondItem="Mp9-z8-q11" secondAttribute="bottom" constant="-40.333333333333371" id="7Ph-fP-g6E"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iuh-KX-unM" secondAttribute="bottom" constant="53.666666666666686" id="7eI-pE-PE6"/>
+                                                        <constraint firstItem="1Qr-Ca-6qP" firstAttribute="leading" secondItem="i9E-90-7I2" secondAttribute="leading" constant="20" id="8Fl-VV-9k3"/>
+                                                        <constraint firstItem="iuh-KX-unM" firstAttribute="top" secondItem="KIW-gv-Ka9" secondAttribute="bottom" constant="25.666666666666629" id="CzB-w0-VWn"/>
+                                                        <constraint firstItem="G9Z-3m-NVn" firstAttribute="top" secondItem="i9E-90-7I2" secondAttribute="top" constant="34" id="Ea6-uP-kjj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dWO-yT-L4J" secondAttribute="trailing" constant="61" id="Ec1-SU-Cv4"/>
+                                                        <constraint firstItem="KIW-gv-Ka9" firstAttribute="top" secondItem="cJW-5A-IMF" secondAttribute="top" id="Gaz-sO-O9c"/>
+                                                        <constraint firstItem="KIW-gv-Ka9" firstAttribute="trailing" secondItem="4Ia-Ww-RIt" secondAttribute="trailing" id="JZ5-pA-sy0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Ia-Ww-RIt" secondAttribute="trailing" constant="19" id="L4l-6J-mqB"/>
+                                                        <constraint firstItem="Lia-dX-Kqr" firstAttribute="leading" secondItem="i9E-90-7I2" secondAttribute="leading" constant="20" id="Ls4-uG-6sF"/>
+                                                        <constraint firstItem="KIW-gv-Ka9" firstAttribute="leading" secondItem="cJW-5A-IMF" secondAttribute="trailing" constant="16" id="MW7-Gz-l9j"/>
+                                                        <constraint firstItem="4Ia-Ww-RIt" firstAttribute="leading" secondItem="cJW-5A-IMF" secondAttribute="trailing" constant="-91" id="OjH-dC-Gk3"/>
+                                                        <constraint firstItem="skD-0f-23R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lia-dX-Kqr" secondAttribute="trailing" constant="8" symbolic="YES" id="QtR-pM-RrZ"/>
+                                                        <constraint firstItem="iuh-KX-unM" firstAttribute="top" secondItem="cJW-5A-IMF" secondAttribute="bottom" constant="25.666666666666629" id="RcC-Be-dfX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="G9Z-3m-NVn" secondAttribute="trailing" constant="44" id="THC-MO-Gtl"/>
+                                                        <constraint firstItem="G9Z-3m-NVn" firstAttribute="leading" secondItem="1Qr-Ca-6qP" secondAttribute="trailing" constant="17" id="VEv-5I-Tyt"/>
+                                                        <constraint firstItem="KIW-gv-Ka9" firstAttribute="top" secondItem="4Ia-Ww-RIt" secondAttribute="bottom" constant="8" id="WUI-Mt-O9V"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Mp9-z8-q11" secondAttribute="trailing" constant="199" id="aB6-wy-gLp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iuh-KX-unM" secondAttribute="trailing" id="aiN-Wz-3HI"/>
+                                                        <constraint firstItem="cJW-5A-IMF" firstAttribute="leading" secondItem="i9E-90-7I2" secondAttribute="leading" constant="20" symbolic="YES" id="ehl-xS-scX"/>
+                                                        <constraint firstItem="1Qr-Ca-6qP" firstAttribute="centerY" secondItem="G9Z-3m-NVn" secondAttribute="centerY" id="gEa-nG-iZ6"/>
+                                                        <constraint firstItem="Ntg-g6-9kD" firstAttribute="top" secondItem="1Qr-Ca-6qP" secondAttribute="bottom" constant="23.333333333333343" id="heq-8m-xvf"/>
+                                                        <constraint firstItem="Mp9-z8-q11" firstAttribute="top" secondItem="Lia-dX-Kqr" secondAttribute="bottom" constant="-34.999999999999972" id="jJH-GX-mWZ"/>
+                                                        <constraint firstItem="dWO-yT-L4J" firstAttribute="top" secondItem="UzF-Xx-elg" secondAttribute="bottom" constant="27" id="qgq-Nj-Y44"/>
+                                                        <constraint firstItem="Lia-dX-Kqr" firstAttribute="top" secondItem="Ntg-g6-9kD" secondAttribute="bottom" constant="22.333333333333343" id="rE3-kD-kvr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4Ia-Ww-RIt" secondAttribute="bottom" constant="165" id="skZ-ea-arz"/>
+                                                        <constraint firstItem="G9Z-3m-NVn" firstAttribute="leading" secondItem="UzF-Xx-elg" secondAttribute="leading" id="snf-U5-dB3"/>
+                                                        <constraint firstItem="skD-0f-23R" firstAttribute="top" secondItem="UzF-Xx-elg" secondAttribute="bottom" constant="25" id="ssO-gO-H1k"/>
+                                                        <constraint firstItem="4Ia-Ww-RIt" firstAttribute="leading" secondItem="i9E-90-7I2" secondAttribute="leading" constant="20" id="viu-uC-XsB"/>
+                                                        <constraint firstItem="iuh-KX-unM" firstAttribute="leading" secondItem="i9E-90-7I2" secondAttribute="leading" id="yOh-3u-Cj2"/>
+                                                        <constraint firstItem="dWO-yT-L4J" firstAttribute="leading" secondItem="skD-0f-23R" secondAttribute="trailing" constant="11" id="z5O-TI-mqj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gNR-Rr-DeO" firstAttribute="leading" secondItem="VcT-O3-tgb" secondAttribute="leading" constant="93" id="71E-j5-Z2m"/>
+                                                <constraint firstAttribute="trailing" secondItem="Bb5-ds-WLs" secondAttribute="trailing" constant="20" id="FXv-d4-5di"/>
+                                                <constraint firstItem="Klg-or-NhX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="VcT-O3-tgb" secondAttribute="leading" constant="93" id="JLn-rx-onp"/>
+                                                <constraint firstItem="Bb5-ds-WLs" firstAttribute="leading" secondItem="Klg-or-NhX" secondAttribute="trailing" constant="23.333333333333314" id="Kky-26-PFh"/>
+                                                <constraint firstItem="i9E-90-7I2" firstAttribute="top" secondItem="VcT-O3-tgb" secondAttribute="top" constant="120" id="QdO-U1-jEX"/>
+                                                <constraint firstItem="Klg-or-NhX" firstAttribute="top" secondItem="VcT-O3-tgb" secondAttribute="top" constant="24" id="Qvj-HI-vrz"/>
+                                                <constraint firstItem="i9E-90-7I2" firstAttribute="leading" secondItem="VcT-O3-tgb" secondAttribute="leading" constant="20" symbolic="YES" id="SRg-5u-eqM"/>
+                                                <constraint firstItem="Bb5-ds-WLs" firstAttribute="top" secondItem="VcT-O3-tgb" secondAttribute="top" constant="24" id="Sqb-Cr-iFc"/>
+                                                <constraint firstAttribute="trailing" secondItem="UzF-Xx-elg" secondAttribute="trailing" constant="28" id="ZMA-UW-xM3"/>
+                                                <constraint firstItem="gNR-Rr-DeO" firstAttribute="top" secondItem="Klg-or-NhX" secondAttribute="bottom" constant="8" symbolic="YES" id="bnM-eH-8Fh"/>
+                                                <constraint firstAttribute="bottom" secondItem="i9E-90-7I2" secondAttribute="bottom" constant="-30" id="qzs-Yg-ppC"/>
+                                                <constraint firstItem="Mp9-z8-q11" firstAttribute="leading" secondItem="VcT-O3-tgb" secondAttribute="leading" constant="40" id="rC1-6H-4xO"/>
+                                                <constraint firstItem="IpX-6A-mPO" firstAttribute="leading" secondItem="gNR-Rr-DeO" secondAttribute="trailing" constant="-9" id="tBN-YU-DhD"/>
+                                                <constraint firstAttribute="trailing" secondItem="i9E-90-7I2" secondAttribute="trailing" constant="20" symbolic="YES" id="tcE-bF-NtZ"/>
+                                                <constraint firstItem="IpX-6A-mPO" firstAttribute="bottom" secondItem="gNR-Rr-DeO" secondAttribute="bottom" id="wed-2Y-6u4"/>
+                                                <constraint firstItem="Bb5-ds-WLs" firstAttribute="leading" secondItem="IpX-6A-mPO" secondAttribute="trailing" constant="23" id="zwW-nh-naI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Aev-H0-JnY" id="4Qg-um-uBj"/>
+                            <outlet property="delegate" destination="Aev-H0-JnY" id="2Nl-xP-cbZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tEr-fe-94e"/>
+                    <size key="freeformSize" width="358" height="792"/>
+                    <connections>
+                        <outlet property="orderDringkingCupTextField" destination="skD-0f-23R" id="uFb-bk-evB"/>
+                        <outlet property="orderDrinkingCommentTextView" destination="4Ia-Ww-RIt" id="hn3-Eq-gv4"/>
+                        <outlet property="orderDrinkingIceSegmentedControl" destination="G9Z-3m-NVn" id="6SH-eo-2EL"/>
+                        <outlet property="orderDrinkingImageView" destination="Bb5-ds-WLs" id="ALE-xf-rxw"/>
+                        <outlet property="orderDrinkingNameLabel" destination="Klg-or-NhX" id="wwY-z6-8yB"/>
+                        <outlet property="orderDrinkingPriceLabel" destination="IpX-6A-mPO" id="HWE-hd-qa0"/>
+                        <outlet property="orderDrinkingSugarSegmentedControl" destination="UzF-Xx-elg" id="Okp-EN-yxr"/>
+                        <outlet property="orderDrinkingUserNmanTextField" destination="cJW-5A-IMF" id="BzV-W9-kF1"/>
+                        <outlet property="orderDrinkingUserPhoneTextField" destination="KIW-gv-Ka9" id="uVn-gX-rw5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhC-CL-KQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3262" y="-766"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

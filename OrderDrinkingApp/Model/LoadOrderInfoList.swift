@@ -1,23 +1,24 @@
 //
-//  UploadOrderData.swift
+//  LoadOrderInfoList.swift
 //  OrderDrinkingApp
-//  上傳訂單資訊到Airtable
 //
-//  Created by Tai on 2022/11/6.
+//  Created by Tai on 2022/11/7.
 //
 
 import Foundation
 
-struct UploadOrderData: Codable {
+struct LoadOrderInfoList: Codable {
     var records: [Records]
     
     struct Records: Codable {
+        var id: String
+        var createdTime: Date
         var fields: Fields
     }
     
     struct Fields: Codable {
         var name: String
-        var price: Int
+        var price: Double
         var iceDegree: String
         var sugarDegree: String
         var cupAmount: Int

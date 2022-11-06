@@ -8,7 +8,20 @@
 import UIKit
 
 class OrderListTableViewCell: UITableViewCell {
-
+    var orderInfo: OrderInfo?
+    
+    @IBOutlet weak var orderInfoUserNameLabel: UILabel!
+    @IBOutlet weak var orderInfoUserPhoneLabel: UILabel!
+    @IBOutlet weak var orderInfoDrinkingNameLabel: UILabel!
+    @IBOutlet weak var orderInfoCupAmountLabel: UILabel!
+    @IBOutlet weak var orderInfoIceDegreeLabel: UILabel!
+    @IBOutlet weak var orderInfoSugarDegreeLabel: UILabel!
+    @IBOutlet weak var orderInfoOrderTimeLabel: UILabel!
+    @IBOutlet weak var orderInfoCommentTextView: UITextView!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -22,5 +22,6 @@ struct OrderInfo: Codable {
         var comment: String
         var userName: String
         var userPhone: String
+        var totalAmount: Int
     }
 }

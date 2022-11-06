@@ -8,38 +8,69 @@
 import UIKit
 
 class OrderListTableViewController: UITableViewController {
+    var loadOrderInfoList = [LoadOrderInfoList.Records]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        fetchOrderInfoList()
+    }
+    
+    func fetchOrderInfoList() {
+        let url = URL(string: "https://api.airtable.com/v0/appHy2q9FOUrGGhqS/OrderList")!
+        let apiKey = "Bearer keyyjw8cP0RNRL7GS"
+        let httpHeader = "Authorization"
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue(apiKey, forHTTPHeaderField: httpHeader)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data {
+                do {
+                    let decoder = JSONDecoder()
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                    decoder.dateDecodingStrategy = .formatted(formatter)
+                    let orderInfo = try decoder.decode(LoadOrderInfoList.self, from: data)
+                    for i in 0...(orderInfo.records.count - 1){
+                        self.loadOrderInfoList.append(orderInfo.records[i])
+                    }
+                    print(self.loadOrderInfoList)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
     }
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return loadOrderInfoList.count
+    }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(OrderListTableViewCell.self)", for: indexPath) as! OrderListTableViewCell
+        
+        cell.orderInfoUserNameLabel.text = loadOrderInfoList[indexPath.row].fields.userName
+        cell.orderInfoUserPhoneLabel.text = loadOrderInfoList[indexPath.row].fields.userPhone
+        cell.orderInfoDrinkingNameLabel.text = loadOrderInfoList[indexPath.row].fields.name
+        cell.orderInfoCupAmountLabel.text = "\(loadOrderInfoList[indexPath.row].fields.cupAmount)"
+        cell.orderInfoIceDegreeLabel.text = loadOrderInfoList[indexPath.row].fields.iceDegree
+        cell.orderInfoSugarDegreeLabel.text = loadOrderInfoList[indexPath.row].fields.sugarDegree
+        cell.orderInfoOrderTimeLabel.text = "\(loadOrderInfoList[indexPath.row].createdTime)"
+        cell.orderInfoCommentTextView.text = loadOrderInfoList[indexPath.row].fields.comment
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

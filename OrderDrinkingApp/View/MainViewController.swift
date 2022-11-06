@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        //切換冷熱飲
         drinkingContainerViewsChange()
     }
     

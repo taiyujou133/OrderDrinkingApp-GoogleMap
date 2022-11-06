@@ -13,6 +13,8 @@
 		335E09A02917972700CA23A1 /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E099F2917972700CA23A1 /* OrderListTableViewCell.swift */; };
 		335E09A22917CE0200CA23A1 /* UploadOrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E09A12917CE0200CA23A1 /* UploadOrderData.swift */; };
 		335E09A42917D46B00CA23A1 /* OrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E09A32917D46B00CA23A1 /* OrderInfo.swift */; };
+		335E09A62918FF5600CA23A1 /* LoadOrderInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E09A52918FF5600CA23A1 /* LoadOrderInfoList.swift */; };
+		335E09A8291912B000CA23A1 /* UpdateOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E09A7291912B000CA23A1 /* UpdateOrderTableViewController.swift */; };
 		33B0BB3C291603D8006AC4F9 /* ChangeToOrderDrinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B0BB3B291603D8006AC4F9 /* ChangeToOrderDrinking.swift */; };
 		33B0BB3E29160908006AC4F9 /* OrderDrinkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */; };
 		33BAD2E72913818500DF76BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAD2E62913818500DF76BC /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 		335E099F2917972700CA23A1 /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
 		335E09A12917CE0200CA23A1 /* UploadOrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadOrderData.swift; sourceTree = "<group>"; };
 		335E09A32917D46B00CA23A1 /* OrderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfo.swift; sourceTree = "<group>"; };
+		335E09A52918FF5600CA23A1 /* LoadOrderInfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadOrderInfoList.swift; sourceTree = "<group>"; };
+		335E09A7291912B000CA23A1 /* UpdateOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOrderTableViewController.swift; sourceTree = "<group>"; };
 		33B0BB3B291603D8006AC4F9 /* ChangeToOrderDrinking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeToOrderDrinking.swift; sourceTree = "<group>"; };
 		33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDrinkingTableViewController.swift; sourceTree = "<group>"; };
 		33BAD2E32913818500DF76BC /* OrderDrinkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderDrinkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,7 @@
 				33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */,
 				335E099D291796DA00CA23A1 /* OrderListTableViewController.swift */,
 				335E099F2917972700CA23A1 /* OrderListTableViewCell.swift */,
+				335E09A7291912B000CA23A1 /* UpdateOrderTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				33B0BB3B291603D8006AC4F9 /* ChangeToOrderDrinking.swift */,
 				335E09A12917CE0200CA23A1 /* UploadOrderData.swift */,
 				335E09A32917D46B00CA23A1 /* OrderInfo.swift */,
+				335E09A52918FF5600CA23A1 /* LoadOrderInfoList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,9 +222,11 @@
 				33BAD3022913DC6900DF76BC /* MainViewController.swift in Sources */,
 				33BAD30829148E5300DF76BC /* HotDrinkingTableViewCell.swift in Sources */,
 				33B0BB3E29160908006AC4F9 /* OrderDrinkingTableViewController.swift in Sources */,
+				335E09A8291912B000CA23A1 /* UpdateOrderTableViewController.swift in Sources */,
 				33BAD2E72913818500DF76BC /* AppDelegate.swift in Sources */,
 				33BAD30429148D9B00DF76BC /* MenuList.swift in Sources */,
 				335E09A02917972700CA23A1 /* OrderListTableViewCell.swift in Sources */,
+				335E09A62918FF5600CA23A1 /* LoadOrderInfoList.swift in Sources */,
 				335E09A22917CE0200CA23A1 /* UploadOrderData.swift in Sources */,
 				33BAD2E92913818500DF76BC /* SceneDelegate.swift in Sources */,
 				3351B18929149B9B0020F4EA /* ColdDrinkingTableViewController.swift in Sources */,

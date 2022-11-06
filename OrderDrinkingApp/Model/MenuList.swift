@@ -8,10 +8,10 @@
 import UIKit
 
 struct MenuList: Codable {
-    var records: [DrinkingSecondDetail]
+    var records: [DrinkingRecords]
 }
 
-struct DrinkingSecondDetail: Codable {
+struct DrinkingRecords: Codable {
     var fields: DrinkingDetail
 }
 

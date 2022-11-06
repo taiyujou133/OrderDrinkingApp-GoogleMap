@@ -20,6 +20,7 @@ class OrderDrinkingTableViewController: UITableViewController {
     @IBOutlet weak var orderDrinkingUserNmanTextField: UITextField!
     @IBOutlet weak var orderDrinkingUserPhoneTextField: UITextField!
     
+    var iceHotKind: String = ""
     var name: String = ""
     var price: Int = 0
     var iceDegree: String = ""
@@ -28,6 +29,7 @@ class OrderDrinkingTableViewController: UITableViewController {
     var comment: String = ""
     var userName: String = ""
     var userPhone: String = ""
+    var totalAmount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +46,6 @@ class OrderDrinkingTableViewController: UITableViewController {
             orderDrinkingImageView.kf.setImage(with: URL(string: drinkImage))
             orderDrinkingPriceLabel.text = "\(drinkingPrice)"
         }
-        
-        name = orderDrinkingNameLabel.text!
-        price = Int(orderDrinkingPriceLabel.text!)!
     }
     
     @IBAction func orderDrinkingCupStepper(_ sender: UIStepper) {
@@ -55,8 +54,14 @@ class OrderDrinkingTableViewController: UITableViewController {
     }
     
     @IBAction func orderDrinkingOrderButtonAction(_ sender: Any) {
-        self.iceDegree = "\(orderDrinkingIceSegmentedControl.selectedSegmentIndex)"
-        self.sugarDegree = "\(orderDrinkingSugarSegmentedControl.selectedSegmentIndex)"
+        let iceHotKind = drinkingInfo?.iceHotKind
+        let ice: Int = orderDrinkingIceSegmentedControl.selectedSegmentIndex
+        let sugar: Int = orderDrinkingSugarSegmentedControl.selectedSegmentIndex
+        
+        self.name = orderDrinkingNameLabel.text!
+        self.price = Int(orderDrinkingPriceLabel.text!)!
+        self.iceDegree = "\(iceHotKind == "Ice" ? (ice == 0 ? "正常" : ice == 1 ? "8分冰" : "去冰") : "熱飲")"
+        self.sugarDegree = "\(sugar == 0 ? "正常" : sugar == 1 ? "8分糖" : sugar == 2 ? "5分糖" : sugar == 3 ? "3分糖" : "無糖")"
         if let cupAmount = orderDringkingCupTextField.text {
             self.cupAmount = Int(cupAmount) ?? 0
         }
@@ -65,12 +70,33 @@ class OrderDrinkingTableViewController: UITableViewController {
         }
         self.userName = orderDrinkingUserNmanTextField.text!
         self.userPhone = orderDrinkingUserPhoneTextField.text!
+        self.totalAmount = self.price * self.cupAmount
         
-        uploadOrderInfo(name: name, price: price, iceDegree: iceDegree, sugarDegree: sugarDegree, cupAmount: cupAmount, comment: comment, userName: userName, userPhone: userPhone)
+        if self.userName.isEmpty == true || userPhone.isEmpty == true {
+            let controller = UIAlertController(title: "欄位空白", message: "請輸入姓名及電話，謝謝", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "確認", style: .default)
+            controller.addAction(okAction)
+            present(controller, animated: true)
+        }
+        
+        //確認訂單
+        let controller = UIAlertController(title: "訂單確認", message: "總共 \(self.cupAmount) 杯\n 總金額:\(self.totalAmount)\n請問是否訂購?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "確認", style: .default) { _ in
+            self.uploadOrderInfo(name: self.name, price: self.price, iceDegree: self.iceDegree, sugarDegree: self.sugarDegree, cupAmount: self.cupAmount, comment: self.comment, userName: self.userName, userPhone: self.userPhone, totalAmount: self.totalAmount)
+        }
+        controller.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel)
+        controller.addAction(cancelAction)
+        present(controller, animated: true)
     }
     
     //上傳訂單資訊
-    func uploadOrderInfo(name: String, price: Int, iceDegree: String, sugarDegree: String, cupAmount: Int, comment: String, userName: String, userPhone: String) {
+    func uploadOrderInfo(name: String, price: Int, iceDegree: String, sugarDegree: String, cupAmount: Int, comment: String, userName: String, userPhone: String, totalAmount: Int) {
+        
+        //計算總金額
+        self.totalAmount = price * cupAmount
+        
         let url = URL(string: "https://api.airtable.com/v0/appHy2q9FOUrGGhqS/OrderList")!
         let apiKey = "Bearer keyyjw8cP0RNRL7GS"
         let httpHeader = "Authorization"
@@ -79,7 +105,7 @@ class OrderDrinkingTableViewController: UITableViewController {
         request.setValue(apiKey, forHTTPHeaderField: httpHeader)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let encoder = JSONEncoder()
-        let fieldsData = UploadOrderData.Fields(name: name, price: price, iceDegree: iceDegree, sugarDegree: sugarDegree, cupAmount: cupAmount, comment: comment, userName: userName, userPhone: userPhone)
+        let fieldsData = UploadOrderData.Fields(name: name, price: price, iceDegree: iceDegree, sugarDegree: sugarDegree, cupAmount: cupAmount, comment: comment, userName: userName, userPhone: userPhone, totalAmount: totalAmount)
         let uploadData = UploadOrderData.Records(fields: fieldsData)
         let data = try? encoder.encode(uploadData)
         request.httpBody = data
@@ -96,6 +122,11 @@ class OrderDrinkingTableViewController: UITableViewController {
                 }
             }
         }.resume()
+        
+        let controller = UIAlertController(title: "訂購通知", message: "己完成訂購，謝謝", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "好的", style: .default)
+        controller.addAction(okAction)
+        present(controller, animated: true)
     }
     // MARK: - Table view data source
 
