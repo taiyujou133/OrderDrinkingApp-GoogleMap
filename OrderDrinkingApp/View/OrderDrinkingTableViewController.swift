@@ -20,7 +20,6 @@ class OrderDrinkingTableViewController: UITableViewController {
     @IBOutlet weak var orderDrinkingUserNmanTextField: UITextField!
     @IBOutlet weak var orderDrinkingUserPhoneTextField: UITextField!
     
-    var iceHotKind: String = ""
     var name: String = ""
     var price: Int = 0
     var iceDegree: String = ""
@@ -116,7 +115,7 @@ class OrderDrinkingTableViewController: UITableViewController {
                     let formatter = DateFormatter()
                     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
                     decoder.dateDecodingStrategy = .formatted(formatter)
-                    let orderInfo = try decoder.decode(OrderInfo.self, from: data)
+                    let _ = try decoder.decode(OrderInfo.self, from: data)
                 } catch {
                     print(error)
                 }

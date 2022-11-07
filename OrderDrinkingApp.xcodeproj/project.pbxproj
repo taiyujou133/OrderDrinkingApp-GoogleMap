@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334D94EB291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334D94EA291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift */; };
 		3351B18929149B9B0020F4EA /* ColdDrinkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351B18829149B9B0020F4EA /* ColdDrinkingTableViewController.swift */; };
 		3351B18B29149BAA0020F4EA /* HotDrinkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351B18A29149BAA0020F4EA /* HotDrinkingTableViewController.swift */; };
 		335E099E291796DA00CA23A1 /* OrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E099D291796DA00CA23A1 /* OrderListTableViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334D94EA291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeToUpdateOrderInfo.swift; sourceTree = "<group>"; };
 		3351B18829149B9B0020F4EA /* ColdDrinkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColdDrinkingTableViewController.swift; sourceTree = "<group>"; };
 		3351B18A29149BAA0020F4EA /* HotDrinkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDrinkingTableViewController.swift; sourceTree = "<group>"; };
 		335E099D291796DA00CA23A1 /* OrderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewController.swift; sourceTree = "<group>"; };
@@ -107,13 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				33BAD3012913DC6900DF76BC /* MainViewController.swift */,
-				33BAD30529148E2600DF76BC /* ColdDrinkingTableViewCell.swift */,
-				33BAD30729148E5300DF76BC /* HotDrinkingTableViewCell.swift */,
 				3351B18829149B9B0020F4EA /* ColdDrinkingTableViewController.swift */,
+				33BAD30529148E2600DF76BC /* ColdDrinkingTableViewCell.swift */,
 				3351B18A29149BAA0020F4EA /* HotDrinkingTableViewController.swift */,
-				33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */,
+				33BAD30729148E5300DF76BC /* HotDrinkingTableViewCell.swift */,
 				335E099D291796DA00CA23A1 /* OrderListTableViewController.swift */,
 				335E099F2917972700CA23A1 /* OrderListTableViewCell.swift */,
+				33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */,
 				335E09A7291912B000CA23A1 /* UpdateOrderTableViewController.swift */,
 			);
 			path = View;
@@ -127,6 +129,7 @@
 				335E09A12917CE0200CA23A1 /* UploadOrderData.swift */,
 				335E09A32917D46B00CA23A1 /* OrderInfo.swift */,
 				335E09A52918FF5600CA23A1 /* LoadOrderInfoList.swift */,
+				334D94EA291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				335E09A42917D46B00CA23A1 /* OrderInfo.swift in Sources */,
+				334D94EB291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift in Sources */,
 				335E099E291796DA00CA23A1 /* OrderListTableViewController.swift in Sources */,
 				33BAD3022913DC6900DF76BC /* MainViewController.swift in Sources */,
 				33BAD30829148E5300DF76BC /* HotDrinkingTableViewCell.swift in Sources */,

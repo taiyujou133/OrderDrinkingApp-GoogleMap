@@ -9,7 +9,7 @@ import UIKit
 
 class OrderListTableViewController: UITableViewController {
     var loadOrderInfoList = [LoadOrderInfoList.Records]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +35,6 @@ class OrderListTableViewController: UITableViewController {
                     for i in 0...(orderInfo.records.count - 1){
                         self.loadOrderInfoList.append(orderInfo.records[i])
                     }
-                    print(self.loadOrderInfoList)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -46,6 +45,23 @@ class OrderListTableViewController: UITableViewController {
         }.resume()
     }
 
+    @IBSegueAction func changeToUpdateOrderInfo(_ coder: NSCoder) -> UpdateOrderTableViewController? {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(OrderListTableViewCell.self)") as! OrderListTableViewCell
+        
+        let userName = cell.orderInfoUserNameLabel.text!
+        let userPhone = cell.orderInfoUserPhoneLabel.text!
+        let drinkingName = cell.orderInfoDrinkingNameLabel.text!
+        let cupAmount = Int(cell.orderInfoCupAmountLabel.text!)!
+        let iceDegreen = cell.orderInfoIceDegreeLabel.text!
+        let sugarDegreen = cell.orderInfoSugarDegreeLabel.text!
+        let comment = cell.orderInfoCommentTextView.text!
+        let price = Double(cell.orderInfoPriceHiddenLabel.text!)!
+        
+        let controller = UpdateOrderTableViewController(coder: coder)
+        controller?.updateOrderInfo = ChangeToUpdateOrderInfo(userName: userName, userPhone: userPhone, drinkingName: drinkingName, cupAmount: cupAmount, iceDegreen: iceDegreen, sugarDegreen: sugarDegreen, comment: comment, price: price)
+        return controller
+    }
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,9 +81,8 @@ class OrderListTableViewController: UITableViewController {
         cell.orderInfoSugarDegreeLabel.text = loadOrderInfoList[indexPath.row].fields.sugarDegree
         cell.orderInfoOrderTimeLabel.text = "\(loadOrderInfoList[indexPath.row].createdTime)"
         cell.orderInfoCommentTextView.text = loadOrderInfoList[indexPath.row].fields.comment
-
-        // Configure the cell...
-
+        cell.orderInfoPriceHiddenLabel.text = "\(Int(loadOrderInfoList[indexPath.row].fields.price))"
+//        cell.orderInfoPriceHiddenLabel.isHidden = true
         return cell
     }
     
@@ -107,14 +122,12 @@ class OrderListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
     */
-
 }

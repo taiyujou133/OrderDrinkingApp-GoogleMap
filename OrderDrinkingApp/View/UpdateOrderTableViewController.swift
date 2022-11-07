@@ -8,28 +8,50 @@
 import UIKit
 
 class UpdateOrderTableViewController: UITableViewController {
-
+    var updateOrderInfo: ChangeToUpdateOrderInfo?
+    
+    @IBOutlet weak var updateOrderDrinkingNameLabel: UILabel!
+    @IBOutlet weak var updateOrderPriceLabel: UILabel!
+    @IBOutlet weak var updateOrderIceDegreeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var updateOrderSugarDegreeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var updateOrderCupTextField: UITextField!
+    @IBOutlet weak var updateOrderCommentTextView: UITextView!
+    @IBOutlet weak var updateOrderUserNameTextField: UITextField!
+    @IBOutlet weak var updateOrderUserPhoneTextField: UITextField!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let ice = updateOrderInfo?.iceDegreen
+        
+        updateOrderDrinkingNameLabel.text = updateOrderInfo?.drinkingName
+        if let price = updateOrderInfo?.price {
+            updateOrderPriceLabel.text = "\(price)"
+        }
+        updateOrderIceDegreeSegmentedControl.selectedSegmentIndex = (ice == "正常" ? 0 : ice == "8分冰" ? 1 : 2)
     }
 
+    @IBAction func updateOrderCupStepper(_ sender: UIStepper) {
+        let stepperValue = Int(sender.value)
+        updateOrderCupTextField.text = String(stepperValue)
+    }
+    
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
