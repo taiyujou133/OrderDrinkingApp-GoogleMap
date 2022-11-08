@@ -8,6 +8,7 @@
 import Foundation
 
 struct ChangeToUpdateOrderInfo {
+    var id: String
     var userName: String
     var userPhone: String
     var drinkingName: String
@@ -15,5 +16,5 @@ struct ChangeToUpdateOrderInfo {
     var iceDegreen: String
     var sugarDegreen: String
     var comment: String
-    var price: Double
+    var price: Int
 }

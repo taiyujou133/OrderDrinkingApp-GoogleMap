@@ -71,8 +71,8 @@ class OrderDrinkingTableViewController: UITableViewController {
         self.userPhone = orderDrinkingUserPhoneTextField.text!
         self.totalAmount = self.price * self.cupAmount
         
-        if self.userName.isEmpty == true || userPhone.isEmpty == true {
-            let controller = UIAlertController(title: "欄位空白", message: "請輸入姓名及電話，謝謝", preferredStyle: .alert)
+        if userName.isEmpty == true || userPhone.isEmpty == true {
+            let controller = UIAlertController(title: "欄位空白", message: "請輸入姓名及電話", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "確認", style: .default)
             controller.addAction(okAction)
             present(controller, animated: true)
@@ -109,6 +109,15 @@ class OrderDrinkingTableViewController: UITableViewController {
         let data = try? encoder.encode(uploadData)
         request.httpBody = data
         URLSession.shared.dataTask(with: request) { data, response, error in
+//            if error == nil {
+//                let controller = UIAlertController(title: "訂購通知", message: "己完成訂購，謝謝", preferredStyle: .alert)
+//                let okAction = UIAlertAction(title: "好的", style: .default)
+//                controller.addAction(okAction)
+//                self.present(controller, animated: true)
+//            } else {
+//                print(error ?? "")
+//            }
+            
             if let data {
                 do {
                     let decoder = JSONDecoder()
@@ -122,10 +131,10 @@ class OrderDrinkingTableViewController: UITableViewController {
             }
         }.resume()
         
-        let controller = UIAlertController(title: "訂購通知", message: "己完成訂購，謝謝", preferredStyle: .alert)
+        let controller = UIAlertController(title: "訂購通知", message: "己完成訂購", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "好的", style: .default)
         controller.addAction(okAction)
-        present(controller, animated: true)
+        self.present(controller, animated: true)
     }
     // MARK: - Table view data source
 

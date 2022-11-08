@@ -44,22 +44,23 @@ class OrderListTableViewController: UITableViewController {
             }
         }.resume()
     }
-
-    @IBSegueAction func changeToUpdateOrderInfo(_ coder: NSCoder) -> UpdateOrderTableViewController? {
+    
+    @IBSegueAction func changeToUpdateOrderInfoSegue(_ coder: NSCoder) -> UpdateOrderTableViewController? {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(OrderListTableViewCell.self)") as! OrderListTableViewCell
+        let indexPath = tableView.indexPathForSelectedRow?.row
         
-        let userName = cell.orderInfoUserNameLabel.text!
-        let userPhone = cell.orderInfoUserPhoneLabel.text!
-        let drinkingName = cell.orderInfoDrinkingNameLabel.text!
-        let cupAmount = Int(cell.orderInfoCupAmountLabel.text!)!
-        let iceDegreen = cell.orderInfoIceDegreeLabel.text!
-        let sugarDegreen = cell.orderInfoSugarDegreeLabel.text!
-        let comment = cell.orderInfoCommentTextView.text!
-        let price = Double(cell.orderInfoPriceHiddenLabel.text!)!
+        let id = loadOrderInfoList[indexPath!].id
+        let userName = loadOrderInfoList[indexPath!].fields.userName
+        let userPhone = loadOrderInfoList[indexPath!].fields.userPhone
+        let drinkingName = loadOrderInfoList[indexPath!].fields.name
+        let cupAmount = loadOrderInfoList[indexPath!].fields.cupAmount
+        let iceDegree = loadOrderInfoList[indexPath!].fields.iceDegree
+        let sugarDegree = loadOrderInfoList[indexPath!].fields.sugarDegree
+        let comment = loadOrderInfoList[indexPath!].fields.comment
+        let price = Int(loadOrderInfoList[indexPath!].fields.price)
         
         let controller = UpdateOrderTableViewController(coder: coder)
-        controller?.updateOrderInfo = ChangeToUpdateOrderInfo(userName: userName, userPhone: userPhone, drinkingName: drinkingName, cupAmount: cupAmount, iceDegreen: iceDegreen, sugarDegreen: sugarDegreen, comment: comment, price: price)
+        controller?.updateOrderInfo = ChangeToUpdateOrderInfo(id: id, userName: userName, userPhone: userPhone, drinkingName: drinkingName, cupAmount: cupAmount, iceDegreen: iceDegree, sugarDegreen: sugarDegree, comment: comment, price: price)
         return controller
     }
     // MARK: - Table view data source
@@ -79,10 +80,14 @@ class OrderListTableViewController: UITableViewController {
         cell.orderInfoCupAmountLabel.text = "\(loadOrderInfoList[indexPath.row].fields.cupAmount)"
         cell.orderInfoIceDegreeLabel.text = loadOrderInfoList[indexPath.row].fields.iceDegree
         cell.orderInfoSugarDegreeLabel.text = loadOrderInfoList[indexPath.row].fields.sugarDegree
-        cell.orderInfoOrderTimeLabel.text = "\(loadOrderInfoList[indexPath.row].createdTime)"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        let dateString = dateFormatter.string(from: loadOrderInfoList[indexPath.row].createdTime)
+        cell.orderInfoOrderTimeLabel.text = dateString
+        
         cell.orderInfoCommentTextView.text = loadOrderInfoList[indexPath.row].fields.comment
-        cell.orderInfoPriceHiddenLabel.text = "\(Int(loadOrderInfoList[indexPath.row].fields.price))"
-//        cell.orderInfoPriceHiddenLabel.isHidden = true
+    
         return cell
     }
     
@@ -127,7 +132,11 @@ class OrderListTableViewController: UITableViewController {
     /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextController = segue.destination as! UpdateOrderTableViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(OrderListTableViewCell.self)") as! OrderListTableViewCell
         
+        print(cell.orderInfoIceDegreeLabel.text!)
+        nextController.updateOrderInfo?.iceDegreen = cell.orderInfoIceDegreeLabel.text!
     }
     */
 }

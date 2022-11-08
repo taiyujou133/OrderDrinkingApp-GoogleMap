@@ -20,7 +20,6 @@ class OrderListTableViewCell: UITableViewCell {
     @IBOutlet weak var orderInfoCommentTextView: UITextView!
     @IBOutlet weak var orderInfoPriceHiddenLabel: UILabel!
     
-
     
     override func awakeFromNib() {
         super.awakeFromNib()

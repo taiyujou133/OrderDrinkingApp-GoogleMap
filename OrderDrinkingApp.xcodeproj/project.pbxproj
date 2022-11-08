@@ -30,6 +30,7 @@
 		33BAD30A29148FDB00DF76BC /* dealerplate california.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33BAD30929148FDB00DF76BC /* dealerplate california.ttf */; };
 		33DAFA522915523C002C8495 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 33DAFA512915523C002C8495 /* Kingfisher */; };
 		33DAFA582915F96E002C8495 /* wqy-zenhei.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 33DAFA572915F96E002C8495 /* wqy-zenhei.ttc */; };
+		33DCF4E1291B9218008836DB /* UpdateOrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF4E0291B9218008836DB /* UpdateOrderInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		33BAD30729148E5300DF76BC /* HotDrinkingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDrinkingTableViewCell.swift; sourceTree = "<group>"; };
 		33BAD30929148FDB00DF76BC /* dealerplate california.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dealerplate california.ttf"; sourceTree = "<group>"; };
 		33DAFA572915F96E002C8495 /* wqy-zenhei.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wqy-zenhei.ttc"; sourceTree = "<group>"; };
+		33DCF4E0291B9218008836DB /* UpdateOrderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOrderInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				335E09A32917D46B00CA23A1 /* OrderInfo.swift */,
 				335E09A52918FF5600CA23A1 /* LoadOrderInfoList.swift */,
 				334D94EA291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift */,
+				33DCF4E0291B9218008836DB /* UpdateOrderInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				335E09A42917D46B00CA23A1 /* OrderInfo.swift in Sources */,
 				334D94EB291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift in Sources */,
 				335E099E291796DA00CA23A1 /* OrderListTableViewController.swift in Sources */,
+				33DCF4E1291B9218008836DB /* UpdateOrderInfo.swift in Sources */,
 				33BAD3022913DC6900DF76BC /* MainViewController.swift in Sources */,
 				33BAD30829148E5300DF76BC /* HotDrinkingTableViewCell.swift in Sources */,
 				33B0BB3E29160908006AC4F9 /* OrderDrinkingTableViewController.swift in Sources */,
