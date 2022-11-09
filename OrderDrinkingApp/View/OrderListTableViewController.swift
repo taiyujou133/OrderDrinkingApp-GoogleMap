@@ -16,6 +16,11 @@ class OrderListTableViewController: UITableViewController {
         fetchOrderInfoList()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        fetchOrderInfoList()
+    }
+    
     func fetchOrderInfoList() {
         let url = URL(string: "https://api.airtable.com/v0/appHy2q9FOUrGGhqS/OrderList")!
         let apiKey = "Bearer keyyjw8cP0RNRL7GS"
