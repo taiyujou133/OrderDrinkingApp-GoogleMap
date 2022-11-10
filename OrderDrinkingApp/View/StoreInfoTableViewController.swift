@@ -20,7 +20,7 @@ class StoreInfoTableViewController: UITableViewController {
         let orgUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=24.1374,120.6869&radius=1000&keyword=春水堂&language=zh-TW&key=AIzaSyAvQBmjA7DwVTiy1zI7xiIEWMxPNzxEJDE"
         //網址有中文字，需進行編碼
         let strUrl = orgUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        var request = URLRequest(url: URL(string: strUrl!)!)
+        let request = URLRequest(url: URL(string: strUrl!)!)
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data {
                 do {

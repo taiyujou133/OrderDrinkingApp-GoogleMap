@@ -61,7 +61,7 @@ class ColdDrinkingTableViewController: UITableViewController {
         cell.priceLabel.text = "\(menuList[indexPath.row].price)"
         cell.coldImageView.kf.setImage(with: menuList[indexPath.row].image[0].url)
         cell.coldImageView.clipsToBounds = true
-        cell.coldImageView.layer.cornerRadius = 10
+        cell.coldImageView.layer.cornerRadius = 30
         return cell
     }
     

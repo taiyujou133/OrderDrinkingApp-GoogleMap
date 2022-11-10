@@ -59,7 +59,7 @@ class HotDrinkingTableViewController: UITableViewController {
         cell.priceLabel.text = "\(menuList[indexPath.row].price)"
         cell.hotImageView.kf.setImage(with: menuList[indexPath.row].image[0].url)
         cell.hotImageView.clipsToBounds = true
-        cell.hotImageView.layer.cornerRadius = 10
+        cell.hotImageView.layer.cornerRadius = 30
         return cell
     }
     
