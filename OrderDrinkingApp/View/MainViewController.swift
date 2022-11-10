@@ -9,10 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //儲存螢幕寬度，省得每次都要打很多字
+    //儲存螢幕寬度
     let width = UIScreen.main.bounds.width
-    
-    //我先在素材庫存了七張圖片，這是儲存圖片的陣列
+    //先在素材庫存了七張圖片，這是儲存圖片的陣列
     let imageArray: [UIImage] =
         {
             var arr = [UIImage]()

@@ -12,6 +12,11 @@ class OrderListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let controller = UIAlertController(title: "使用通知", message: "點選訂單，可進入修改刪除頁面", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "好的", style: .default)
+        controller.addAction(okAction)
+        self.present(controller, animated: true)
 
         fetchOrderInfoList()
     }
@@ -37,6 +42,7 @@ class OrderListTableViewController: UITableViewController {
                     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
                     decoder.dateDecodingStrategy = .formatted(formatter)
                     let orderInfo = try decoder.decode(LoadOrderInfoList.self, from: data)
+                    self.loadOrderInfoList = []
                     for i in 0...(orderInfo.records.count - 1){
                         self.loadOrderInfoList.append(orderInfo.records[i])
                     }
