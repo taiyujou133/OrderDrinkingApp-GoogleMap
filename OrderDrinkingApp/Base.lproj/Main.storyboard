@@ -948,17 +948,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-Cv-GAK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BR5-hd-IUp">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-Cv-GAK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="852"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="x5h-Rs-29H" kind="embed" id="oYc-im-4Tm"/>
                                 </connections>
                             </containerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BR5-hd-IUp">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nhe-ht-YwQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -968,41 +968,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSJ-Mw-1DX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="-747"/>
+            <point key="canvasLocation" x="1533.5877862595419" y="-747.18309859154931"/>
         </scene>
         <!--Store Info Table View Controller-->
         <scene sceneID="9YD-J6-T34">
             <objects>
                 <tableViewController id="x5h-Rs-29H" customClass="StoreInfoTableViewController" customModule="OrderDrinkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="270" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fwU-cm-aO8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreInfoTableViewCell" rowHeight="270" id="ywI-E4-Tmm" customClass="StoreInfoTableViewCell" customModule="OrderDrinkingApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="270"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ywI-E4-Tmm" id="DGa-Hi-06A">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0F2-OP-mRR">
-                                            <rect key="frame" x="20" y="11" width="353" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0F2-OP-mRR">
+                                            <rect key="frame" x="20" y="11" width="335" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktt-LK-q4F">
-                                            <rect key="frame" x="20" y="47" width="353" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktt-LK-q4F">
+                                            <rect key="frame" x="20" y="47" width="335" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xad-yZ-aoU" customClass="GMSMapView">
+                                            <rect key="frame" x="20" y="79" width="335" height="180"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="xad-yZ-aoU" firstAttribute="top" secondItem="ktt-LK-q4F" secondAttribute="bottom" constant="8" symbolic="YES" id="WVg-hw-miL"/>
+                                        <constraint firstItem="ktt-LK-q4F" firstAttribute="top" secondItem="0F2-OP-mRR" secondAttribute="bottom" constant="8" symbolic="YES" id="kuE-zu-jYw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0F2-OP-mRR" firstAttribute="top" secondItem="ywI-E4-Tmm" secondAttribute="top" constant="11" id="BZW-KV-dqB"/>
+                                    <constraint firstItem="xad-yZ-aoU" firstAttribute="leading" secondItem="ywI-E4-Tmm" secondAttribute="leading" constant="20" id="UaW-Be-UHa"/>
+                                    <constraint firstAttribute="trailing" secondItem="xad-yZ-aoU" secondAttribute="trailing" constant="20" id="YyD-Ge-cME"/>
+                                    <constraint firstAttribute="trailing" secondItem="ktt-LK-q4F" secondAttribute="trailing" constant="20" id="aCI-4Z-IXY"/>
+                                    <constraint firstItem="0F2-OP-mRR" firstAttribute="leading" secondItem="ywI-E4-Tmm" secondAttribute="leading" constant="20" id="lsh-Cq-wuL"/>
+                                    <constraint firstAttribute="trailing" secondItem="0F2-OP-mRR" secondAttribute="trailing" constant="20" id="mKA-CV-0mq"/>
+                                    <constraint firstItem="ktt-LK-q4F" firstAttribute="leading" secondItem="ywI-E4-Tmm" secondAttribute="leading" constant="20" id="qvy-lo-mOK"/>
+                                    <constraint firstAttribute="bottom" secondItem="xad-yZ-aoU" secondAttribute="bottom" constant="11" id="s1d-rW-12W"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="mapView" destination="xad-yZ-aoU" id="aFA-z8-UBp"/>
                                     <outlet property="storeAddressLabel" destination="ktt-LK-q4F" id="EbG-qd-UOY"/>
                                     <outlet property="storeNameLabel" destination="0F2-OP-mRR" id="HpZ-LU-NdI"/>
                                 </connections>
@@ -1017,7 +1036,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-0d-5Gf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2462" y="-748"/>
+            <point key="canvasLocation" x="2461.8320610687024" y="-748.59154929577471"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4T0-J7-viA">
@@ -1025,6 +1044,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tNT-Xc-eVn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d6o-P9-FRW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance"/>
@@ -1105,6 +1125,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

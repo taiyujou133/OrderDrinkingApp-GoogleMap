@@ -45,6 +45,11 @@ class OrderDrinkingTableViewController: UITableViewController {
             orderDrinkingImageView.kf.setImage(with: URL(string: drinkImage))
             orderDrinkingPriceLabel.text = "\(drinkingPrice)"
         }
+        
+        orderDrinkingPriceLabel.clipsToBounds = true
+        orderDrinkingPriceLabel.layer.cornerRadius = 5
+        orderDrinkingCommentTextView.clipsToBounds = true
+        orderDrinkingCommentTextView.layer.cornerRadius = 5
     }
     
     @IBAction func orderDrinkingCupStepper(_ sender: UIStepper) {

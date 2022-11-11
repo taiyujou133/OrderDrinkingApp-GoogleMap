@@ -22,6 +22,7 @@
 		3374637D291D4E7000193799 /* StoreInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374637C291D4E7000193799 /* StoreInfoTableViewController.swift */; };
 		3374637F291D4EA100193799 /* StoreInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374637E291D4EA100193799 /* StoreInfoTableViewCell.swift */; };
 		33746381291D4F4800193799 /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33746380291D4F4800193799 /* StoreInfo.swift */; };
+		33746387291E30F400193799 /* MarkerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33746386291E30F400193799 /* MarkerData.swift */; };
 		33B0BB3C291603D8006AC4F9 /* ChangeToOrderDrinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B0BB3B291603D8006AC4F9 /* ChangeToOrderDrinking.swift */; };
 		33B0BB3E29160908006AC4F9 /* OrderDrinkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */; };
 		33BAD2E72913818500DF76BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAD2E62913818500DF76BC /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		3374637C291D4E7000193799 /* StoreInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoTableViewController.swift; sourceTree = "<group>"; };
 		3374637E291D4EA100193799 /* StoreInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoTableViewCell.swift; sourceTree = "<group>"; };
 		33746380291D4F4800193799 /* StoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
+		33746386291E30F400193799 /* MarkerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerData.swift; sourceTree = "<group>"; };
 		33B0BB3B291603D8006AC4F9 /* ChangeToOrderDrinking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeToOrderDrinking.swift; sourceTree = "<group>"; };
 		33B0BB3D29160908006AC4F9 /* OrderDrinkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDrinkingTableViewController.swift; sourceTree = "<group>"; };
 		33BAD2E32913818500DF76BC /* OrderDrinkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderDrinkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 				334D94EA291A2E3A004934B7 /* ChangeToUpdateOrderInfo.swift */,
 				33DCF4E0291B9218008836DB /* UpdateOrderInfo.swift */,
 				33746380291D4F4800193799 /* StoreInfo.swift */,
+				33746386291E30F400193799 /* MarkerData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,7 +175,6 @@
 				488DD79B3C63B9945E74C435 /* Pods-OrderDrinkingApp.debug.xcconfig */,
 				9063C57130C639252E96A282 /* Pods-OrderDrinkingApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -226,7 +228,7 @@
 			);
 			mainGroup = 33BAD2DA2913818500DF76BC;
 			packageReferences = (
-				33DAFA502915523C002C8495 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				33DAFA502915523C002C8495 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 33BAD2E42913818500DF76BC /* Products */;
 			projectDirPath = "";
@@ -306,6 +308,7 @@
 				335E099E291796DA00CA23A1 /* OrderListTableViewController.swift in Sources */,
 				33DCF4E1291B9218008836DB /* UpdateOrderInfo.swift in Sources */,
 				33BAD3022913DC6900DF76BC /* MainViewController.swift in Sources */,
+				33746387291E30F400193799 /* MarkerData.swift in Sources */,
 				3374637B291D4D6100193799 /* MyCollectionViewCell.swift in Sources */,
 				3374637F291D4EA100193799 /* StoreInfoTableViewCell.swift in Sources */,
 				33BAD30829148E5300DF76BC /* HotDrinkingTableViewCell.swift in Sources */,
@@ -545,7 +548,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		33DAFA502915523C002C8495 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		33DAFA502915523C002C8495 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -558,7 +561,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		33DAFA512915523C002C8495 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 33DAFA502915523C002C8495 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = 33DAFA502915523C002C8495 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

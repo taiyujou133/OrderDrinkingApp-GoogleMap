@@ -57,6 +57,8 @@ class HotDrinkingTableViewController: UITableViewController {
         //熱飲才放到cell裡
         cell.nameLabel.text = menuList[indexPath.row].name
         cell.priceLabel.text = "\(menuList[indexPath.row].price)"
+        cell.priceLabel.clipsToBounds = true
+        cell.priceLabel.layer.cornerRadius = 5
         cell.hotImageView.kf.setImage(with: menuList[indexPath.row].image[0].url)
         cell.hotImageView.clipsToBounds = true
         cell.hotImageView.layer.cornerRadius = 30

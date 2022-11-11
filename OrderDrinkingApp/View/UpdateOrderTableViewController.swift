@@ -50,6 +50,11 @@ class UpdateOrderTableViewController: UITableViewController {
         if let cups = updateOrderInfo?.cupAmount {
             updateOrderStepper.value = Double(cups)
         }
+        
+        updateOrderPriceLabel.clipsToBounds = true
+        updateOrderPriceLabel.layer.cornerRadius = 5
+        updateOrderCommentTextView.clipsToBounds = true
+        updateOrderCommentTextView.layer.cornerRadius = 5
     }
 
     @IBAction func updateOrderCupStepper(_ sender: UIStepper) {

@@ -27,7 +27,7 @@ class OrderListTableViewController: UITableViewController {
     }
     
     func fetchOrderInfoList() {
-        let url = URL(string: "https://api.airtable.com/v0/appHy2q9FOUrGGhqS/OrderList")!
+        let url = URL(string: "https://api.airtable.com/v0/appHy2q9FOUrGGhqS/OrderList?sort%5B0%5D%5Bfield%5D=createdTime&sort%5B0%5D%5Bdirection%5D=desc")!
         let apiKey = "Bearer keyyjw8cP0RNRL7GS"
         let httpHeader = "Authorization"
         var request = URLRequest(url: url)
@@ -98,6 +98,23 @@ class OrderListTableViewController: UITableViewController {
         cell.orderInfoOrderTimeLabel.text = dateString
         
         cell.orderInfoCommentTextView.text = loadOrderInfoList[indexPath.row].fields.comment
+        
+        cell.orderInfoUserNameLabel.clipsToBounds = true
+        cell.orderInfoUserNameLabel.layer.cornerRadius = 5
+        cell.orderInfoUserPhoneLabel.clipsToBounds = true
+        cell.orderInfoUserPhoneLabel.layer.cornerRadius = 5
+        cell.orderInfoDrinkingNameLabel.clipsToBounds = true
+        cell.orderInfoDrinkingNameLabel.layer.cornerRadius = 5
+        cell.orderInfoCupAmountLabel.clipsToBounds = true
+        cell.orderInfoCupAmountLabel.layer.cornerRadius = 5
+        cell.orderInfoIceDegreeLabel.clipsToBounds = true
+        cell.orderInfoIceDegreeLabel.layer.cornerRadius = 5
+        cell.orderInfoSugarDegreeLabel.clipsToBounds = true
+        cell.orderInfoSugarDegreeLabel.layer.cornerRadius = 5
+        cell.orderInfoOrderTimeLabel.clipsToBounds = true
+        cell.orderInfoOrderTimeLabel.layer.cornerRadius = 5
+        cell.orderInfoCommentTextView.clipsToBounds = true
+        cell.orderInfoCommentTextView.layer.cornerRadius = 5
     
         return cell
     }
