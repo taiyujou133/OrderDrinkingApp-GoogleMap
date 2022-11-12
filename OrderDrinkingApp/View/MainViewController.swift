@@ -79,7 +79,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             // 滑動方向預設為垂直。注意若設為垂直，則cell的加入方式為由左至右，滿了才會換行；若是水平則由上往下，滿了才會換列
             layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
             
-            //        設定collectionView的大小
+            // 設定collectionView的大小
             let rect = CGRect(x: 0, y: 90, width: width, height: width * (9 / 17))
             self.collectionView = UICollectionView(frame: rect, collectionViewLayout: layout)
             self.collectionView.dataSource = self

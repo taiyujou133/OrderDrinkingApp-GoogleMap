@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -655,6 +656,9 @@
                                                 <constraint firstItem="STJ-SY-7PW" firstAttribute="bottom" secondItem="qZO-Oz-j3J" secondAttribute="bottom" id="zyG-Fv-WUj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="g5r-JM-c6D" id="FtO-Lf-EmQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -679,6 +683,12 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhg-jc-FsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="g5r-JM-c6D">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="Rsa-Rn-N90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="4230.5343511450383" y="9.1549295774647899"/>
         </scene>
@@ -913,6 +923,9 @@
                                                 <constraint firstItem="IpX-6A-mPO" firstAttribute="bottom" secondItem="gNR-Rr-DeO" secondAttribute="bottom" id="wed-2Y-6u4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="selectedBackgroundView" destination="pne-yu-aMX" id="d6D-yu-HPV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -937,6 +950,12 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhC-CL-KQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="pne-yu-aMX">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="L6A-Gj-8MG"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="4187.7862595419847" y="-767.25352112676057"/>
         </scene>
@@ -953,7 +972,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-Cv-GAK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="852"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="x5h-Rs-29H" kind="embed" id="oYc-im-4Tm"/>
@@ -968,38 +987,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSJ-Mw-1DX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533.5877862595419" y="-747.18309859154931"/>
+            <point key="canvasLocation" x="1037" y="-747"/>
         </scene>
         <!--Store Info Table View Controller-->
         <scene sceneID="9YD-J6-T34">
             <objects>
                 <tableViewController id="x5h-Rs-29H" customClass="StoreInfoTableViewController" customModule="OrderDrinkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="270" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fwU-cm-aO8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreInfoTableViewCell" rowHeight="270" id="ywI-E4-Tmm" customClass="StoreInfoTableViewCell" customModule="OrderDrinkingApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="50" width="390" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ywI-E4-Tmm" id="DGa-Hi-06A">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0F2-OP-mRR">
-                                            <rect key="frame" x="20" y="11" width="335" height="28"/>
+                                            <rect key="frame" x="20" y="11" width="350" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktt-LK-q4F">
-                                            <rect key="frame" x="20" y="47" width="335" height="24"/>
+                                            <rect key="frame" x="20" y="47" width="350" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xad-yZ-aoU" customClass="GMSMapView">
-                                            <rect key="frame" x="20" y="79" width="335" height="180"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xad-yZ-aoU">
+                                            <rect key="frame" x="20" y="79" width="350" height="180"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-LJ-tDi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="351" height="180"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <standardMapConfiguration key="preferredConfiguration"/>
+                                                </mapView>
+                                            </subviews>
                                             <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         </view>
                                     </subviews>
@@ -1021,9 +1047,11 @@
                                     <constraint firstAttribute="bottom" secondItem="xad-yZ-aoU" secondAttribute="bottom" constant="11" id="s1d-rW-12W"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="mapView" destination="xad-yZ-aoU" id="aFA-z8-UBp"/>
+                                    <outlet property="mapView" destination="XI5-LJ-tDi" id="wf9-0Y-shO"/>
+                                    <outlet property="selectedBackgroundView" destination="WUQ-II-6O3" id="pVJ-aU-Mmd"/>
                                     <outlet property="storeAddressLabel" destination="ktt-LK-q4F" id="EbG-qd-UOY"/>
                                     <outlet property="storeNameLabel" destination="0F2-OP-mRR" id="HpZ-LU-NdI"/>
+                                    <segue destination="IQB-ry-8HV" kind="show" destinationCreationSelector="changeToStoreInfoDeailSegue:" id="KLD-aw-GMZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1035,8 +1063,66 @@
                     <navigationItem key="navigationItem" id="6c6-ea-dv9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-0d-5Gf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="WUQ-II-6O3">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="XX2-a8-Aik"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="2461.8320610687024" y="-748.59154929577471"/>
+            <point key="canvasLocation" x="1760" y="-747"/>
+        </scene>
+        <!--Map Detail View Controller-->
+        <scene sceneID="DZC-FH-I5E">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="IQB-ry-8HV" customClass="MapDetailViewController" customModule="OrderDrinkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1y7-m1-oUa">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5t-hd-93N">
+                                <rect key="frame" x="0.0" y="122" width="391" height="730"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-8j-94e">
+                                <rect key="frame" x="20" y="42" width="354" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlb-cz-6Ii">
+                                <rect key="frame" x="20" y="78" width="354" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XUO-Zr-zUC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XUO-Zr-zUC" firstAttribute="trailing" secondItem="Tlb-cz-6Ii" secondAttribute="trailing" constant="16" id="4A3-AM-0td"/>
+                            <constraint firstItem="XUO-Zr-zUC" firstAttribute="top" secondItem="dmx-8j-94e" secondAttribute="top" constant="17" id="56W-bi-M4c"/>
+                            <constraint firstItem="S5t-hd-93N" firstAttribute="trailing" secondItem="XUO-Zr-zUC" secondAttribute="trailing" constant="1" id="6Cj-UM-4ph"/>
+                            <constraint firstItem="S5t-hd-93N" firstAttribute="bottom" secondItem="XUO-Zr-zUC" secondAttribute="bottom" constant="34" id="7xZ-Pu-KOV"/>
+                            <constraint firstItem="XUO-Zr-zUC" firstAttribute="trailing" secondItem="dmx-8j-94e" secondAttribute="trailing" constant="16" id="RpC-tD-RXN"/>
+                            <constraint firstItem="S5t-hd-93N" firstAttribute="leading" secondItem="XUO-Zr-zUC" secondAttribute="leading" id="VNB-OK-pbV"/>
+                            <constraint firstItem="S5t-hd-93N" firstAttribute="top" secondItem="Tlb-cz-6Ii" secondAttribute="bottom" constant="20" id="W8O-N4-r4d"/>
+                            <constraint firstItem="dmx-8j-94e" firstAttribute="leading" secondItem="XUO-Zr-zUC" secondAttribute="leading" constant="20" id="f8I-Jq-Sjp"/>
+                            <constraint firstItem="Tlb-cz-6Ii" firstAttribute="top" secondItem="dmx-8j-94e" secondAttribute="bottom" constant="8" symbolic="YES" id="fYS-8N-cPj"/>
+                            <constraint firstItem="S5t-hd-93N" firstAttribute="top" secondItem="XUO-Zr-zUC" secondAttribute="top" constant="63" id="tz0-Fh-TuJ"/>
+                            <constraint firstItem="Tlb-cz-6Ii" firstAttribute="leading" secondItem="XUO-Zr-zUC" secondAttribute="leading" constant="20" id="zjF-Tl-peV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="THs-eZ-Mk7"/>
+                    <connections>
+                        <outlet property="mapDetailStoreAddressLabel" destination="Tlb-cz-6Ii" id="ltB-vs-26U"/>
+                        <outlet property="mapDetailStoreNameLabel" destination="dmx-8j-94e" id="lle-lj-unL"/>
+                        <outlet property="mapDetailView" destination="S5t-hd-93N" id="qtQ-Ms-uJD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIp-kE-Fql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480.9160305343512" y="-746.47887323943667"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4T0-J7-viA">
@@ -1093,7 +1179,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGt-eI-KAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="608" y="-747"/>
+            <point key="canvasLocation" x="320" y="-747"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

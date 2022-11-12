@@ -6,47 +6,15 @@
 //
 
 import UIKit
-import GoogleMaps
-//import GoogleMapsUtils
-//
-//class MyMaker: GMSMarker {
-//    let markerData: MarkerData // Raw data from server
-//
-//    init(markerData: MarkerData) {
-//        self.markerData = markerData
-//        super.init()
-//        self.title = markerData.title
-//        self.position = markerData.position
-//    }
-//}
-//
-//class ClusterItem: NSObject, GMUClusterItem {
-//    let markerData: MarkerData // Raw data from server
-//    let position: CLLocationCoordinate2D
-//
-//    init(markerData: MarkerData) {
-//        self.markerData = markerData
-//        self.position = markerData.position
-//    }
-//}
+import MapKit
 
 class StoreInfoTableViewController: UITableViewController {
     var storeInfo = [StoreInfo.StoreDetail]()
-    var storeMapInfo: [MarkerData] = []
-//    var clusterManager: GMUClusterManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fetchStoreInfo()
-        
-//        MarkerData(position: CLLocationCoordinate2D(latitude: 25.033671, longitude: 121.564427), title: "Taiwan", snippet: "台北101")
-        
-//        for i in 0...(storeInfo.count - 1) {
-//            storeMapInfo.append(MarkerData(position: CLLocationCoordinate2D(latitude: self.storeInfo[i].geometry.location.lat, longitude: self.storeInfo[i].geometry.location.lng), title: "\(self.storeInfo[i].name)", snippet: "台灣"))
-//        }
-//
-//        self.iniMapViewMarker(storeMapInfo)
 
     }
     
@@ -63,7 +31,6 @@ class StoreInfoTableViewController: UITableViewController {
                     for i in 0...(storeInfoDecode.results.count - 1){
                         self.storeInfo.append(storeInfoDecode.results[i])
                     }
-//                    print(self.storeInfo)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -74,16 +41,21 @@ class StoreInfoTableViewController: UITableViewController {
         }.resume()
     }
     
-//    private func iniMapViewMarker(_ storeMapInfo: [MarkerData]) {
-//        storeMapInfo
-//            .map{ MyMaker(markerData: $0) }
-//            .forEach {
-//                let item = ClusterItem(markerData: $0.markerData)
-//                self.clusterManager.add(item)
-//            }
-//        self.clusterManager.cluster()
-//    }
-
+    
+    @IBSegueAction func changeToStoreInfoDeailSegue(_ coder: NSCoder) -> MapDetailViewController? {
+        
+        let indexPath = tableView.indexPathForSelectedRow?.row
+        
+        let storeName = storeInfo[indexPath!].name
+        let storeAddress = storeInfo[indexPath!].vicinity
+        let lat = Double(storeInfo[indexPath!].geometry.location.lat)
+        let lng = Double(storeInfo[indexPath!].geometry.location.lng)
+        
+        let controller = MapDetailViewController(coder: coder)
+        controller?.storeMapDeatilInfo = ChangeToStoreInfoDetail(storeName: storeName, storeAddress: storeAddress, lat: lat, lng: lng)
+        return controller
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,17 +72,14 @@ class StoreInfoTableViewController: UITableViewController {
         cell.storeAddressLabel.text = storeInfo[indexPath.row].vicinity
         
         //每一個Cell顯示地圖 台中火車站： 24.13756675158458, 120.68686756709918
-        let camera = GMSCameraPosition.camera(withLatitude: 24.13, longitude: 120.68, zoom: 13.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-//        cell.mapView.delegate = self
-        cell.mapView.isMyLocationEnabled = true
-        cell.mapView.addSubview(mapView)
+        let location = CLLocation(latitude: storeInfo[indexPath.row].geometry.location.lat, longitude: storeInfo[indexPath.row].geometry.location.lng)
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 250, longitudinalMeters: 250)
+        cell.mapView.setRegion(region, animated: true)
         
-        let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2DMake(24.13, 120.68)
-            marker.title = "Sydney"
-            marker.snippet = "Australia"
-            marker.map = mapView
+        let storeLocation = MKPointAnnotation()
+        storeLocation.title = "\(storeInfo[indexPath.row].name)"
+        storeLocation.coordinate = CLLocationCoordinate2D(latitude: storeInfo[indexPath.row].geometry.location.lat, longitude: storeInfo[indexPath.row].geometry.location.lng)
+        cell.mapView.addAnnotation(storeLocation)
         
         cell.mapView.clipsToBounds = true
         cell.mapView.layer.cornerRadius = 5
@@ -166,8 +135,4 @@ class StoreInfoTableViewController: UITableViewController {
     }
     */
 
-}
-
-extension StoreInfoTableViewController: GMSMapViewDelegate {
-    
 }

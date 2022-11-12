@@ -6,13 +6,13 @@
 //
 
 import UIKit
-import GoogleMaps
+import MapKit
 
 class StoreInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeAddressLabel: UILabel!
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapView: MKMapView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
